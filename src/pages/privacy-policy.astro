@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+const sections = [
+  { title: 'No accounts or data collection', text: 'BirdNote is an offline Android app for practicing music reading. You do not need an account. The app does not collect or send personal information to the developer, and does not include advertising, analytics, or tracking tools.' },
+  { title: 'Data stored on your device', text: 'BirdNote saves your settings, practice preferences, and best scores in local app storage so you can keep your preferences and follow your progress. This data is not sent to BirdNote servers or shared by the developer with third parties.' },
+  { title: 'Android backups and deletion', text: 'Android may include this local app data in system backups or transfer it to another device, depending on your device settings and backup provider. Those services are controlled by Android and your provider, not BirdNote. You can delete local BirdNote data by clearing the app’s storage in Android settings or uninstalling it. Manage any existing backups separately through your device or backup provider.' },
+  { title: 'Permissions and children', text: 'BirdNote does not request access to your camera, microphone, contacts, or location. The same privacy practices apply to everyone, including children: no account is required and the app does not collect personal information.' },
+  { title: 'This website', text: 'This website does not add analytics, advertising, or tracking cookies. Visiting it requires an internet connection; the hosting provider may process ordinary connection information, such as your IP address and request details, to deliver and secure the pages. This is separate from the offline BirdNote app.' },
+  { title: 'Policy updates', text: 'If BirdNote’s privacy practices change, this page will be updated with a new revision date.' },
+];
+---
+<Layout title="Privacy policy — BirdNote" description="BirdNote’s privacy policy: no accounts, no tracking, and locally stored settings and scores.">
+  <article class="max-w-2xl">
+    <p class="mb-4 text-sm text-muted">Last updated: <time datetime="2026-10-04">October 4, 2026</time></p>
+    <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">Privacy policy</h1>
+    <p class="mt-6 border-l-2 border-ink pl-5 text-lg leading-relaxed">BirdNote works offline. Your practice is yours.</p>
+    <div class="mt-10 space-y-8">
+      {sections.map(({ title, text }) => <section><h2 class="text-lg font-semibold">{title}</h2><p class="mt-2 leading-relaxed text-muted">{text}</p></section>)}
+      <section>
+        <h2 class="text-lg font-semibold">Contact</h2>
+        <p class="mt-2 leading-relaxed text-muted">For questions about BirdNote or this privacy policy, email <a class="break-all text-ink underline" href="mailto:enzotomassi@gmail.com">enzotomassi@gmail.com</a>. If you contact us, we use the information you choose to send to respond to your request.</p>
+      </section>
+    </div>
+  </article>
+</Layout>
